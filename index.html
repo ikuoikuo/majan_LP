@@ -5,14 +5,27 @@
     <title>テスト</title>
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - pandas
+        - matplotlib
+        - numpy    
+    </py-env>
 </head>
 <body>
     <py-script>
-def test1(n):
-    print(n)
-    
-for i in ['Papa', 'Mama', 'Baby']:
-    test1(i)
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+df = pd.read_csv("data/student-mat.csv",sep=";"')
+# histogram、データの指定
+plt.hist(student_data_math['absences'])
+
+# x軸とy軸のそれぞれのラベル
+plt.xlabel('absences')
+plt.ylabel('count')
+
+# グリッドをつける
+plt.grid(True)
     </py-script>
 </body>
 </html>
