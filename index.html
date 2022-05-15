@@ -17,6 +17,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 df = pd.read_csv("../data/student-mat.csv",sep=";"')
+fig, ax = plt.subplots()
 # histogram、データの指定
 plt.hist(df['absences'])
 
@@ -26,6 +27,7 @@ plt.ylabel('count')
 
 # グリッドをつける
 plt.grid(True)
+pyscript.write('plot', fig)
     </py-script>
 </body>
 </html>
