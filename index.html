@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 df = pd.read_csv("../data/student-mat.csv",sep=";"')
 # histogram、データの指定
-plt.hist(student_data_math['absences'])
+plt.hist(df['absences'])
 
 # x軸とy軸のそれぞれのラベル
 plt.xlabel('absences')
