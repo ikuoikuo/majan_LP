@@ -8,3 +8,4 @@ plt.xlabel('absences')
 plt.ylabel('count')
 
 plt.grid(True)
+plt.show()
