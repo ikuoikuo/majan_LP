@@ -16,15 +16,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-df = pd.read_csv("../data/student-mat.csv",sep=";"')
-# histogram、データの指定
+df = pd.read_csv("data/student-mat.csv",sep=";")
 plt.hist(df['absences'])
-
-# x軸とy軸のそれぞれのラベル
 plt.xlabel('absences')
 plt.ylabel('count')
-
-# グリッドをつける
 plt.grid(True)
     </py-script>
 </body>
