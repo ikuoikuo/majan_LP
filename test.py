@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-df = pd.read_csv("data/student-mat.csv",sep=";")
+df = pd.read_csv("./data/student-mat.csv",sep=";")
 plt.hist(df['absences'])
 
 plt.xlabel('absences')

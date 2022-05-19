@@ -12,15 +12,20 @@
     </py-env>
 </head>
 <body>
+    <div id="plot"></div>
     <py-script>
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
-df = pd.read_csv("data/student-mat.csv",sep=";")
-plt.hist(df['absences'])
-plt.xlabel('absences')
-plt.ylabel('count')
-plt.grid(True)
+        
+df = pd.DataFrame({
+    '名前':['GOKU', 'LUFFY', 'NARUTO'],
+    '年齢':[43, 19, 17]})
+        
+fig, ax = plt.subplots()
+ax.bar(df['名前'], df['年齢'], color='pink')
+plt.title('Age of the hero')
+        
+pyscript.write('plot', fig)
     </py-script>
 </body>
 </html>
